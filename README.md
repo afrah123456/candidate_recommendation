@@ -36,18 +36,7 @@ python app.py
 Open your browser and go to:
 
 http://127.0.0.1:5000
-File Structure
-csharp
-Copy
-Edit
-resume_matcher/
-│
-├── app.py                 # Flask backend
-├── templates/
-│   └── index.html         # Frontend HTML
-├── static/
-│   ├── style.css          # Styling (CSS)
-├── README.md              # This file
+
 # Example Usage
 Paste a job description
 
