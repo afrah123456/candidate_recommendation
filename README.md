@@ -46,6 +46,6 @@ Click Match Resumes
 
 View ranked similarity results and summaries
 
-👨‍💻 Author
-Built by Afrah Fathima — as part of the SproutsAI Internship Assignment
+
+Built by Afrah Fathima 
 
