@@ -14,7 +14,7 @@ app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
 # Use stronger model for better matching
-model = SentenceTransformer('all-mpnet-base-v2')
+model = SentenceTransformer('all-MiniLM-L6-v2')
 
 
 # ------------------------------
