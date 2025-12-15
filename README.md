@@ -1,51 +1,111 @@
 # Resume Matcher Web App
-This web app compares multiple resumes against a job description using semantic similarity via BERT embeddings. It's built with Flask, HTML/CSS, and PyMuPDF for PDF parsing.
 
-# Features
-Upload a job description (text input) and multiple resumes (PDFs)
+AI-powered application that matches resumes to job descriptions using semantic similarity analysis.
 
-Calculates cosine similarity between the job and each resume using Sentence-BERT
+---
 
-Displays similarity scores and resume summaries
+## Overview
 
-Clean and responsive UI
+This web application helps recruiters and hiring managers quickly identify the best candidate matches by comparing multiple resumes against a job description. Using BERT embeddings and semantic similarity, it ranks candidates based on how well their experience aligns with job requirements.
 
-# How It Works
-Uses sentence-transformers (all-MiniLM-L6-v2) to embed text
+---
 
-Computes cosine similarity between job and each resume
+## Features
 
-Displays results on a web interface
+- Upload job description as text input
+- Batch upload multiple resumes (PDF format)
+- Semantic similarity scoring using Sentence-BERT
+- Ranked results with similarity percentages
+- Resume summaries for quick review
+- Clean, responsive web interface
 
-# Requirements
-Install the required Python packages:
+---
 
-bash
-Copy
-Edit
-pip install Flask
-pip install sentence-transformers
-pip install scikit-learn
-pip install PyMuPDF
-🛠️ How to Run the App
-Clone/download the project folder
+## How It Works
 
-Run the Flask server:
+1. **Text Embedding:** Converts job description and resumes into vector representations using Sentence-BERT (all-MiniLM-L6-v2 model)
+2. **Similarity Calculation:** Computes cosine similarity between job description and each resume
+3. **Ranking:** Displays results sorted by match score
+4. **Summarization:** Provides key highlights from each resume
 
+---
+
+## Tech Stack
+
+**Backend:** Flask (Python)  
+**ML Model:** Sentence-Transformers (BERT)  
+**PDF Processing:** PyMuPDF  
+**Similarity Metric:** Cosine Similarity (scikit-learn)  
+**Frontend:** HTML, CSS
+
+---
+
+## Installation
+
+### Prerequisites
+- Python 3.8+
+
+### Setup
+```bash
+# Clone the repository
+git clone <repo-url>
+cd resume-matcher
+
+# Install dependencies
+pip install Flask sentence-transformers scikit-learn PyMuPDF
+```
+
+---
+
+## Usage
+
+### Start the Application
+```bash
 python app.py
-Open your browser and go to:
+```
 
-http://127.0.0.1:5000
+Open your browser and go to: `http://127.0.0.1:5000`
 
-# Example Usage
-Paste a job description
+### Using the App
 
-Upload 1 or more PDF resumes
+1. **Paste job description** in the text area
+2. **Upload PDF resumes** (one or multiple files)
+3. **Click "Match Resumes"**
+4. **View results** - ranked by similarity score with resume summaries
 
-Click Match Resumes
+---
 
-View ranked similarity results and summaries
+## Technical Details
+
+**Model:** `sentence-transformers/all-MiniLM-L6-v2`
+- Lightweight BERT model optimized for semantic similarity
+- 384-dimensional embeddings
+- Fast inference time suitable for real-time matching
+
+**Similarity Metric:** Cosine Similarity
+- Measures angular distance between vectors
+- Range: 0 (no match) to 1 (perfect match)
+- Displayed as percentage for clarity
+
+---
+
+## Use Cases
+
+- **Recruitment agencies** screening hundreds of candidates
+- **HR departments** shortlisting applicants
+- **Job seekers** optimizing resumes for specific roles
+- **Career coaches** analyzing resume-job alignment
 
 
-Built by Afrah Fathima 
+---
 
+## Author
+
+**Afrah Fathima**  
+
+
+---
+
+## License
+
+MIT License
